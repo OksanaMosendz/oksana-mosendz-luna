@@ -1,0 +1,124 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+li {
+   list-style: none;
+}
+
+body {
+   background-color: rgb(238, 231, 231);
+   color: rgb(59, 56, 56);
+   font-family: "Nunito", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 16px;
+}
+
+/* Header */
+
+.header-info {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   background-color: #0000000c;
+}
+
+h1 {
+   font-size: 50px;
+   color: rgb(85, 2, 2);
+   margin-right: 5%;
+   text-shadow: 1px 1px 5px #0000005b;
+}
+
+
+.my-photo {
+   border-radius: 60%;
+}
+
+/* Nav */
+
+.nav-menu {
+   margin-bottom: 30px;
+   margin-top: 30px;
+
+}
+
+.nav-list {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.nav-list-item a {
+   color: rgb(26, 24, 24);
+}
+
+/* Sections*/
+
+.section-title {
+   text-align: center;
+   font-weight: 500;
+   color: rgb(85, 2, 2);
+   margin-bottom: 20px;
+}
+/* About */
+
+#about {
+   margin: 30px 0px;
+   padding: 15px;
+}
+
+/* Experience */
+
+#experience {
+   margin-bottom: 30px;
+   padding: 15px;
+}
+
+.experience-list {
+   display: flex;
+
+   :not(:last-child) {
+      margin-right: 20px;
+   }
+}
+
+.experience-list-item {
+   width: 50%;
+   padding: 20px;
+
+   border-radius: 2%;
+   box-shadow: 1px 1px 5px 1px #0000005b;
+}
+
+
+/* Connect */
+
+#connect {
+   padding: 15px;
+}
+
+.connect-list-item {
+   min-width: 35%;
+   margin-bottom: 10px;
+}
+
+.connect-list-item a {
+   color: rgb(26, 24, 24);
+
+}
+
+.connect-info {
+   display: flex;
+   align-items: center;
+}
+
+.connect-info p {
+   margin-left: 20px;
+}
