@@ -2,6 +2,9 @@
    margin: 0;
    padding: 0;
 }
+html{
+   scroll-behavior: smooth;
+}
 
 a {
    text-decoration: none;
@@ -12,39 +15,33 @@ li {
 }
 
 body {
+  
    background-color: rgb(238, 231, 231);
    color: rgb(59, 56, 56);
    font-family: "Nunito", sans-serif;
    font-weight: 400;
    font-style: normal;
    font-size: 16px;
-}
+   margin-top:100px;  
 
-/* Header */
-
-.header-info {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-   background-color: #0000000c;
-}
-
-h1 {
-   font-size: 50px;
-   color: rgb(85, 2, 2);
-   margin-right: 5%;
-   text-shadow: 1px 1px 5px #0000005b;
 }
 
 
-.my-photo {
-   border-radius: 60%;
+header{
+   position: fixed;
+   top: 0;
+   left:0;
+   width:100%;
+   background-color: rgb(238, 231, 231);
 }
+
+
+
 
 /* Nav */
 
 .nav-menu {
+ 
    margin-bottom: 30px;
    margin-top: 30px;
 
@@ -59,7 +56,11 @@ h1 {
    color: rgb(26, 24, 24);
 }
 
+
+
 /* Sections*/
+
+
 
 .section-title {
    text-align: center;
@@ -67,9 +68,37 @@ h1 {
    color: rgb(85, 2, 2);
    margin-bottom: 20px;
 }
+
+/* Hero */
+
+.hero{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   background-color: #0000000c;
+}
+
+.hero-info{
+   margin-right: 5%;
+   text-align: center;
+}
+
+h1 {
+   font-size: 50px;
+   color: rgb(85, 2, 2);
+   text-shadow: 1px 1px 5px #0000005b;
+}
+
+.my-photo {
+   border-radius: 60%;
+}
+
+
 /* About */
 
 #about {
+   scroll-margin-top:100px;
    margin: 30px 0px;
    padding: 15px;
 }
