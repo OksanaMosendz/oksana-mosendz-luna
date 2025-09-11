@@ -54,17 +54,21 @@ header{
 
 .nav-list-item a {
    color: rgb(26, 24, 24);
+   
+}
+
+.nav-list-item:hover, :focus{
+     color:  rgb(85, 2, 2);
+     transform: scale(1.1);
 }
 
 
 
 /* Sections*/
 
-
-
 .section-title {
    text-align: center;
-   font-weight: 500;
+   font-weight: 700;
    color: rgb(85, 2, 2);
    margin-bottom: 20px;
 }
@@ -133,21 +137,31 @@ h1 {
    padding: 15px;
 }
 
+
 .connect-list-item {
-   min-width: 35%;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
+      
 }
 
-.connect-list-item a {
+.connect-link {
    color: rgb(26, 24, 24);
+   
 
 }
 
 .connect-info {
    display: flex;
    align-items: center;
+    :hover, :focus{
+      color:  rgb(85, 2, 2);
+     transform: scale(1.1);
+   }
 }
 
 .connect-info p {
    margin-left: 20px;
+}
+
+svg{
+    fill: rgb(85, 2, 2);
 }
