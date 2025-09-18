@@ -15,38 +15,44 @@ li {
    list-style: none;
 }
 
-
 body {
-
    background-color: rgb(238, 231, 231);
    color: rgb(59, 56, 56);
    font-family: "Nunito", sans-serif;
    font-weight: 400;
    font-style: normal;
    font-size: 16px;
-   margin-top: 100px;
+   margin-top: 5rem;
 
+   @media (min-width: 1200px) {
+      font-size: 1.2rem;
+   }
 }
-
 
 header {
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
-   background-color: rgb(238, 231, 231);
+   background-color: rgb(223 180 180);
+   border-bottom: 1px black solid;
 }
 
+.container {
+   margin: 0 auto;
+   max-width: 1280px;
+   padding: 0 1rem;
+}
 
+section {
+   margin-bottom: 2rem;
+}
 
 
 /* Nav */
 
 .nav-menu {
-
-   margin-bottom: 30px;
-   margin-top: 30px;
-
+   margin: 2rem 0;
 }
 
 .nav-list {
@@ -54,15 +60,20 @@ header {
    justify-content: space-evenly;
 }
 
-.nav-list-item a {
-   color: rgb(26, 24, 24);
-
-}
-
-.nav-list-item:hover,
+.nav-list-item :hover,
 :focus {
    color: rgb(85, 2, 2);
    transform: scale(1.1);
+   box-shadow: 1px 1px 5px rgb(22, 22, 22);
+   border-radius: 10%;
+}
+
+.nav-list-item a {
+   color: rgb(26, 24, 24);
+
+   @media (min-width: 768px) {
+      padding: 1.5rem;
+   }
 }
 
 
@@ -70,57 +81,69 @@ header {
 /* Sections*/
 
 .section-title {
+   font-size: 1.5rem;
    text-align: center;
    font-weight: 700;
    color: rgb(85, 2, 2);
-   margin-bottom: 20px;
+   margin-bottom: 1rem;
+
+   @media (min-width: 768px) {
+      font-size: 2rem;
+   }
 }
 
 /* Hero */
 
 .hero {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
    background-color: #0000000c;
+   width: 100%;
+   margin-bottom: 2rem;
+   box-shadow: 1px 1px 5px 1px #0000005b;
 }
 
-.hero-info {
-   margin-right: 5%;
+.hero-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 1.5rem;
    text-align: center;
 }
 
-h1 {
-   font-size: 50px;
+.hero-title {
+   font-size: 2rem;
    color: rgb(141, 3, 3);
    text-shadow: 1px 1px 5px #0000005b;
+
+   @media (min-width: 768px) {
+      font-size: 3rem;
+   }
+}
+
+.hero-subtitle {
+   font-size: 1.5rem;
+
+   @media (min-width: 768px) {
+      font-size: 2rem;
+   }
 }
 
 .my-photo {
    border-radius: 60%;
 }
 
-
 /* About */
 
 #about {
-   scroll-margin-top: 100px;
-   margin: 30px 0px;
-   padding: 15px;
+   scroll-margin-top: 5rem;
+   text-align: justify;
 }
 
 /* Experience */
 
-#experience {
-   margin-bottom: 30px;
-   padding: 15px;
-}
-
 .experience-list {
    display: flex;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 1.5rem;
 }
 
 .experience-list-item {
@@ -128,49 +151,64 @@ h1 {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 20px;
+   padding: 1.5rem;
    border-radius: 2%;
    box-shadow: 1px 1px 5px 1px #0000005b;
 }
 
 /* Connect */
 
-#connect {
-   padding: 15px;
-}
+.connect-list {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   justify-content: space-around;
+   justify-items: center;
 
-.connect-list{
-   display: flex;
-   flex-wrap: wrap;
-  justify-content: space-between;
-}
+   @media (min-width: 768px) {
+      row-gap: 2rem;
+      grid-template-columns: auto auto;
+      justify-content: space-around;
+      justify-items: start;
+   }
 
-.connect-list-item {
-   margin-bottom: 10px;
-min-width: 50%;
+   @media (min-width: 1200px) {
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-between;
+   }
 }
 
 .connect-link {
    color: rgb(26, 24, 24);
-
-
 }
 
 .connect-info {
-   display: flex;
+   display: inline-block;
    align-items: center;
-  
+
+   @media (min-width: 768px) {
+      display: flex;
+   }
+
    :hover,
    :focus {
+      fill: rgb(85, 2, 2);
       color: rgb(85, 2, 2);
       transform: scale(1.1);
    }
 }
 
 .connect-info p {
-   margin-left: 15px;
+   display: none;
+
+   @media (min-width: 768px) {
+      display: block;
+      margin-left: 1rem;
+   }
 }
 
 svg {
-   fill: rgb(85, 2, 2);
+   display: inline-block;
+   fill: black;
+   width: 2rem;
+   height: 2rem;
 }
