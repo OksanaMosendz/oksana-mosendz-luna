@@ -51,8 +51,8 @@ section {
 
 /* Nav */
 
-.nav-menu {
-   margin: 2rem 0;
+.nav-menu {  
+padding: 1.7rem;
 }
 
 .nav-list {
@@ -70,12 +70,12 @@ section {
 
 .nav-list-item a {
    color: rgb(26, 24, 24);
+   padding: 1rem;
 
    @media (min-width: 768px) {
       padding: 1.5rem;
    }
 }
-
 
 
 /* Sections*/
@@ -86,6 +86,7 @@ section {
    font-weight: 700;
    color: rgb(85, 2, 2);
    margin-bottom: 1rem;
+   
 
    @media (min-width: 768px) {
       font-size: 2rem;
@@ -156,6 +157,29 @@ section {
    box-shadow: 1px 1px 5px 1px #0000005b;
 }
 
+/* Skills */
+.skills-list{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap:2rem;
+   justify-content: space-around;
+   justify-items: center;
+   align-items: center;
+   border-radius: 2%;
+   box-shadow: 1px 1px 5px 1px #0000005b;
+   background-color:#0000000c; 
+   padding: 1.5rem 0 ;
+
+     @media (min-width: 768px) {
+       grid-template-columns: 1fr 1fr 1fr;
+     }
+
+}
+
+.skills-list li{
+    font-weight: bold;
+}
+
 /* Connect */
 
 .connect-list {
@@ -163,6 +187,7 @@ section {
    grid-template-columns: 1fr 1fr 1fr 1fr;
    justify-content: space-around;
    justify-items: center;
+   
 
    @media (min-width: 768px) {
       row-gap: 2rem;
