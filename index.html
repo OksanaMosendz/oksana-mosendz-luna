@@ -35,6 +35,12 @@
             <li class="nav-list-item">
               <a href="#connect">Connect</a>
             </li>
+            <li class="nav-list-item">
+              <a href="#leaveMessage">Leave a Message</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#messages">Messages</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -99,7 +105,7 @@
       <section id="skills">
         <div class="container">
           <h2 class="section-title skills-title">Skills</h2>
-       <ul class="skills-list"></ul>
+          <ul class="skills-list"></ul>
         </div>
       </section>
 
@@ -197,7 +203,55 @@
           </ul>
         </div>
       </section>
+
+      <!-- Leave a message -->
+      <section id="leaveMessage">
+        <div class="container">
+          <h2 class="section-title">Leave a Message</h2>
+          <form class="leave-message__form" name="leave_message">
+            <div class="leave-message__name">
+              <label for="usersName">Name:</label>
+              <input
+                type="text"
+                name="usersName"
+                id="usersName"
+                required="true"
+              />
+            </div>
+
+            <div class="leave-message__email">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="usersEmail"
+                id="email"
+                required="true"
+              />
+            </div>
+
+            <div class="leave-message__text">
+              <label for="usersMessage">Message:</label>
+              <textarea
+                name="usersMessage"
+                id="usersMessage"
+                required="true"
+                maxlength="150"
+              ></textarea>
+            </div>
+
+            <button class="leave-message__btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Messages -->
+      <section id="messages">
+        <div class="container">
+          <h2 class="section-title">Messages</h2>
+          <ul class="message-list"></ul>
+        </div>
+      </section>
     </main>
-  <script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
