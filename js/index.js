@@ -1,5 +1,7 @@
 // Footer
 
+// const { createElement } = require("react");
+
 const footer = document.createElement("footer");
 const script = document.currentScript;
 const today = new Date();
@@ -36,8 +38,6 @@ for (let i = 0; i < skills.length; i++) {
 const messageForm = document.getElementsByTagName("form")[0];
 const messageSection = document.getElementById("messages");
 const navItemMessage = document.querySelector(`[href='#messages']`);
-
-console.log(navItemMessage);
 
 function displayMessageSection() {
   if (document.getElementsByClassName("message-item").length === 0) {
@@ -98,8 +98,47 @@ messageForm.addEventListener("submit", (e) => {
   });
   newMessage.appendChild(editButton);
 
- 
   messageList.append(newMessage);
   displayMessageSection();
   e.target.reset();
 });
+
+// Projects
+
+let repositories;
+
+function getRepositories() {
+  return fetch("https://api.github.com/users/OksanaMosendz/repos?per_page=40")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.status);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      repositories = data;
+    })
+    .catch((err) => console.log(err));
+}
+
+const projectSection = document.getElementById("projects");
+const projectsList = projectSection.querySelector("ul");
+
+async function createProjectList() {
+  await getRepositories();
+
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement("li");
+    project.className = "project-item";
+
+    const projectLink = document.createElement("a");
+    project.appendChild(projectLink);
+
+    if (repositories[i].description !== null) {
+      projectLink.innerHTML = `${repositories[i].description}`;
+      projectLink.setAttribute("href", `${repositories[i].html_url}`);
+      projectsList.appendChild(project);
+    }
+  }
+}
+createProjectList();
