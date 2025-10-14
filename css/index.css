@@ -44,9 +44,7 @@ header {
    padding: 0 1rem;
 }
 
-section {
-   margin-bottom: 2rem;
-}
+
 
 
 /* Nav */
@@ -82,7 +80,9 @@ section {
 
 section {
    scroll-margin-top: 5rem;
+   margin-bottom: 4rem;
 }
+
 
 .section-title {
    font-size: 1.5rem;
@@ -393,4 +393,35 @@ svg {
    font-size: 1.2rem;
    font-weight: 700;
    color: rgb(85, 2, 2)
+}
+
+/* Projects */
+
+.projects-list{
+display: flex;
+flex-wrap: wrap;
+gap:2rem;
+}
+
+.project-item{
+flex: 1 1 350px;
+text-align: center;
+justify-content: center;
+
+}
+
+.project-item a{
+display: block;
+padding: 4rem;
+border: 1px solid black;
+border-radius: 5px;
+color: rgb(59, 56, 56);
+}
+
+.project-item a:hover,
+.project-item a:focus {
+   color: rgb(85, 2, 2);
+   transform: scale(1.1);
+   box-shadow: 1px 1px 5px rgb(22, 22, 22);
+  
 }

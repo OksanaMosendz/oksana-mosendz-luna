@@ -1,4 +1,7 @@
 # oksana-mosendz-luna
-Assigment Week 5  for Intro to Programming course with Code the Dream
+Assigment Intro to Programming course with Code the Dream
+
+
+[My Open API Project](https://github.com/OksanaMosendz/oksana-mosendz-open-api)
 
 Oksana Mosendz
