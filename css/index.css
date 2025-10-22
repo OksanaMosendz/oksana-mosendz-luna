@@ -34,7 +34,7 @@ header {
    top: 0;
    left: 0;
    width: 100%;
-   background-color: rgb(223 180 180);
+   background-color: indianred;
    border-bottom: 1px black solid;
 }
 
@@ -48,6 +48,7 @@ header {
 
 
 /* Nav */
+
 
 .nav-menu {
    min-height: 4rem;
@@ -64,17 +65,51 @@ header {
 
 
 .nav-list-item a {
-   color: rgb(26, 24, 24);
+   color: rgb(233, 231, 231);
    padding: 1rem;
 }
 
 .nav-list-item a:hover,
 .nav-list-item a:focus {
-   color: rgb(85, 2, 2);
    transform: scale(1.1);
    box-shadow: 1px 1px 5px rgb(22, 22, 22);
    border-radius: 5px;
 }
+
+/* burger */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333333f6;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    display: none; 
+   
+  }
+
+  .nav-list-item {
+    text-align: center;
+    padding: 15px 0;
+
+  }
+}
+
+@media (min-width: 769px) {
+.burger{
+      display:none;
+}
+.nav-list{
+   display: flex;
+}
+}
+
 
 /* Sections*/
 
@@ -423,5 +458,5 @@ color: rgb(59, 56, 56);
    color: rgb(85, 2, 2);
    transform: scale(1.1);
    box-shadow: 1px 1px 5px rgb(22, 22, 22);
-  
+
 }

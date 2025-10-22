@@ -20,8 +20,7 @@ copyright.insertAdjacentHTML(
 copyright.className = "container";
 copyright.style.padding = "1.7rem";
 footer.style.textAlign = "end";
-footer.style.backgroundColor = "rgb(223 180 180)";
-footer.style.borderTop = "1px black solid";
+footer.style.borderTop = "1px indianred solid";
 
 // Skills
 const skills = ["HTML", "CSS", "JavaScript", "React", "GitHub", "Figma"];
@@ -142,3 +141,34 @@ async function createProjectList() {
   }
 }
 createProjectList();
+
+// burger-menu
+
+const burger = document.getElementById('burger');
+const navList = document.querySelector('.nav-list');
+const navListItems=navList.querySelectorAll(".nav-list-item")
+
+burger.addEventListener('click', () => {
+
+  if (navList.style.display === 'flex') {
+    navList.style.display = 'none'; 
+  } else {
+    navList.style.display = 'flex'; 
+  }
+});
+
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    navList.style.display = ''; 
+  } else {
+navList.style.display = 'none';
+
+navListItems.forEach((item)=>{
+  item.addEventListener("click",()=>{
+   navList.style.display = 'none';
+  })
+})
+  }
+});
+
